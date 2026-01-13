@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Início</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+<div class="app">
+
+    <!-- HEADER -->
+    <header class="top-bar">
+    <button class="menu-btn" id="open-menu">☰</button>
+    <div class="user-avatar">A</div>
+</header>
+
+</div>
+
+        
+    </header>
+
+    <!-- CONTEÚDO -->
+ <main class="content">
+
+    <!-- TREINO ATUAL -->
+    <div class="treino-atual-wrapper">
+        <span class="treino-atual-label">Treino atual</span>
+
+        <div class="treino-card ativo treino-atual-card" onclick="irPara('musculacao.html')">
+            <h2>Musculação</h2>
+            <span>Força e hipertrofia</span>
+        </div>
+    </div>
+
+    <!-- TEXTO CENTRAL -->
+    <div class="titulo-central">
+        <h1>Escolha seu esporte</h1>
+        <p>Selecione outro esporte para trocar de treino</p>
+    </div>
+
+    <!-- LISTA DE ESPORTES (SEM O ATUAL) -->
+    <div class="treinos">
+
+        <div class="treino-balao locked">
+            <h3>Corrida</h3>
+            <span>Resistência e cardio</span>
+        </div>
+
+        <div class="treino-balao locked">
+    <h3>Futebol</h3>
+    <p>Explosão e agilidade</p>
+</div>
+
+<div class="treino-balao locked">
+    <h3>Natação</h3>
+    <p>Respiração e resistência</p>
+</div>  
+    </div>
+
+
+</main>
+
+<div id="premium-alert">
+    É necessário assinar o plano premium
+</div>
+
+
+
+<script src="script.js"></script>
+
+<div id="premium-modal" class="modal-overlay">
+    <div class="modal-premium">
+        <h2>Plano Premium</h2>
+
+        <p>
+            Para acessar este treino, é necessário assinar o plano premium.
+        </p>
+
+        <ul>
+            <li>✔ Todos os esportes liberados</li>
+            <li>✔ Treinos personalizados</li>
+            <li>✔ Evolução semanal</li>
+        </ul>
+
+        <div class="modal-actions">
+            <button class="btn-primary">Assinar agora</button>
+            <button class="btn-secondary" id="close-modal">Fechar</button>
+        </div>
+    </div>
+</div>
+
+</body>
+<!-- OVERLAY MENU -->
+<div id="menu-overlay" class="menu-overlay"></div>
+
+<!-- MENU LATERAL -->
+<aside id="side-menu" class="side-menu">
+    <div class="menu-header">
+        <h3>Trainify</h3>
+        <button id="close-menu">✕</button>
+    </div>
+
+    <nav class="menu-links">
+        <a href="#">Dashboard</a>
+        <a href="#">Meus treinos</a>
+        <a href="#">Plano Premium</a>
+        <a href="#">Configurações</a>
+    </nav>
+</aside>
+
+</html>
+
+

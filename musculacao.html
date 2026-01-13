@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Musculação | Trainify</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="top-bar">
+    <div class="menu-icon">☰</div>
+    <h2 class="top-title">Musculação</h2>
+    <div class="profile-icon">👤</div>
+</header>
+
+<main class="content">
+
+    <section class="treino-info">
+
+    <div class="treino-info-header">
+        <button class="back-inline" onclick="window.location.href='dashboard.html'">
+            ⬅
+        </button>
+
+        </div>
+    </div>
+
+    <div class="weekly-header">
+    <h2>Treino semanal</h2>
+    <p>Selecione um dia para ver o treino</p>
+</div>
+
+
+</section>
+
+
+
+    <section class="dias-treino">
+
+    <div class="dia-card" data-dia="1" onclick="openDay('segunda')">
+        <span class="dia">Segunda-feira</span>
+        <span class="muscle-group">Peito e Tríceps</span>
+    </div>
+
+    <div class="dia-card" data-dia="2" onclick="openDay('terca')">
+        <span class="dia">Terça-feira</span>
+        <span class="muscle-group">Costas e Bíceps</span>
+    </div>
+
+    <div class="dia-card" data-dia="3" onclick="openDay('quarta')">
+        <span class="dia">Quarta-feira</span>
+        <span class="muscle-group">Pernas</span>
+    </div>
+
+    <div class="dia-card" data-dia="4" onclick="openDay('quinta')">
+        <span class="dia">Quinta-feira</span>
+        <span class="muscle-group">Ombro e Abdômen</span>
+    </div>
+
+    <div class="dia-card" data-dia="5" onclick="openDay('sexta')">
+        <span class="dia">Sexta-feira</span>
+        <span class="muscle-group">Full Body</span>
+    </div>
+
+</section>
+
+
+</main>
+
+
+<script>
+    const hoje = new Date().getDay();
+
+    document.querySelectorAll('.dia-card').forEach(card => {
+        if (Number(card.dataset.dia) === hoje) {
+            card.classList.add('hoje');
+        }
+    });
+</script>
+
+<script src="diajs.js"></script>
+</body>
+</html>
