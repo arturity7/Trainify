@@ -1,34 +1,39 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Login</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trainify - Login</title>
+
+  <!-- ⚠️ MUITO IMPORTANTE: confirme se seu CSS se chama mesmo style.css e está na mesma pasta -->
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body class="login-body">
-
-<div class="login-page">
-
+  <div class="login-page">
     <h1 class="site-title">Trainify</h1>
 
     <div class="login-card">
+      <form id="authForm">
+        <input id="email" type="email" placeholder="Email" required />
+        <input id="password" type="password" placeholder="Senha" required />
 
-        <p class="subtitle">Acesse sua conta</p>
+        <button id="submitBtn" type="submit">Entrar</button>
+        <button id="googleBtn" type="button" class="google-btn">
+  <img class="google-icon" src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="">
+  <span>Entrar com Google</span>
+</button>
 
-        <input type="email" placeholder="E-mail">
-        <input type="password" placeholder="Senha">
 
-        <button onclick="login()">Entrar</button>
+        <!-- botão de alternar modo -->
+        <button id="toggleBtn" type="button" class="link">Criar conta</button>
 
-        <span class="link">Esqueceu a senha?</span>
-
+        <p id="msg" style="margin-top: 12px; color: #b3b3b3;"></p>
+      </form>
     </div>
+  </div>
 
-</div>
-
-<script src="script.js"></script>
+  <!-- ⚠️ firebase/auth precisa ser module -->
+  <script type="module" src="auth.js"></script>
 </body>
-
-
 </html>

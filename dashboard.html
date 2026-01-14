@@ -26,14 +26,20 @@
  <main class="content">
 
     <!-- TREINO ATUAL -->
-    <div class="treino-atual-wrapper">
-        <span class="treino-atual-label">Treino atual</span>
+<div class="treino-atual-wrapper">
+  <span class="treino-atual-label">Treino atual</span>
 
-        <div class="treino-card ativo treino-atual-card" onclick="irPara('musculacao.html')">
-            <h2>Musculação</h2>
-            <span>Força e hipertrofia</span>
-        </div>
+  <div class="sport-card" onclick="openTreino('musculacao')">
+    <img src="imgs/musculação.png" alt="Musculação">
+    <div class="sport-overlay"></div>
+
+    <div class="sport-text">
+      <h2 class="sport-title">Musculação</h2>
+      <span class="sport-subtitle">Força e hipertrofia</span>
     </div>
+  </div>
+</div>
+
 
     <!-- TEXTO CENTRAL -->
     <div class="titulo-central">
@@ -91,8 +97,8 @@
         </div>
     </div>
 </div>
+<script type="module" src="guard.js"></script>
 
-</body>
 <!-- OVERLAY MENU -->
 <div id="menu-overlay" class="menu-overlay"></div>
 
@@ -110,7 +116,7 @@
         <a href="#">Configurações</a>
     </nav>
 </aside>
-
+</body>
 </html>
 
 
